@@ -1,5 +1,5 @@
 <h1>Add a New Restaurant</h1>
-<%= form_for(@restaurant) do |t| %>
+<%= simple_form_for [@restaurant] do |t| %>
   <%= t.label :name %>
   <%= t.text_field :name %>
   <%= t.label :address %>
@@ -10,4 +10,4 @@
   <%= t.text_field :category %>
   <%= t.submit %>
 <% end %>
-<p><%= link_to "Back to Restaurants list", restaurants_path %></p>
+<p><%= link_to "Back to Restaurants list", restaurants_path, class: "btn btn-primary" %></p>
